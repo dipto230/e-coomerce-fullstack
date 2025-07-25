@@ -4,6 +4,7 @@ import GenderCollectionSection from '../components/Products/GenderCollectionSect
 import NewArrivals from '../components/Products/NewArrivals'
 import ProductDetails from '../components/Products/ProductDetails'
 import ProductGrid from '../components/Products/ProductGrid'
+import FeaturedCollection from '../components/Products/FeaturedCollection'
 
 const placeholderProducts = [
     {
@@ -49,6 +50,7 @@ const Home = () => {
               <ProductGrid products={placeholderProducts}/>
               
           </div>
+          <FeaturedCollection />
     </div>
   )
 }
