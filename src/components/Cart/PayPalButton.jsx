@@ -1,11 +1,13 @@
 import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
 import React from 'react';
 
-const PayPalButton = ({amount,onSuccess,onError}) => {
+const PayPalButton = ({ amount, onSuccess, onError }) => {
+     console.log("PayPal Client ID: ", import.meta.env.VITE_PAYPAL_CLIENT_ID);
   return (
       <PayPalScriptProvider options={{
-          "client-id": "AQiGL_GzscCGLlFNpjnZTaW5sCNToCIvPuyGE0Dvv6kl5elRb97Iw2FPrrokXR2mGYC8fVyTrqwFZ2Rn",
-            currency: "USD"
+          "client-id": import.meta.env.VITE_PAYPAL_CLIENT_ID,
+          currency: "EUR",
+              intent: "capture",
       }}
        
       >
@@ -25,4 +27,4 @@ const PayPalButton = ({amount,onSuccess,onError}) => {
   );
 };
 
-export default PayPalButton;
+export default PayPalButton; 
